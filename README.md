@@ -23,7 +23,8 @@ La VPN garantiza:
 
 ### Diagrama Lógico
 
-<img width="1469" height="1181" alt="Captura de pantalla 2026-03-18 204033" src="https://github.com/user-attachments/assets/768c8842-b164-4018-a9c7-7b1972db8cc9" />
+<img width="1023" height="830" alt="image" src="https://github.com/user-attachments/assets/e2be7713-d0a1-4f3e-9953-6e3021b192f3" />
+
 
 
 
