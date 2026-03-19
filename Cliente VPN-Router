@@ -1,0 +1,43 @@
+configure terminal
+hostname Router-Cliente
+
+interface GigabitEthernet0/0
+ ip address 172.20.11.1 255.255.255.252
+ no shutdown
+ exit
+
+interface GigabitEthernet0/1
+ ip address 10.24.65.254 255.255.255.0
+ no shutdown
+ exit
+
+ip route 0.0.0.0 0.0.0.0 172.20.11.2
+
+crypto isakmp policy 10
+ encr des
+ hash sha
+ authentication pre-share
+ group 5
+ exit
+
+crypto isakmp key Matricula20241165 address 172.20.11.2
+
+crypto ipsec transform-set TS esp-des esp-sha-hmac
+ mode tunnel
+ exit
+
+access-list 100 permit ip 10.24.65.0 0.0.0.255 10.20.11.0 0.0.0.255
+
+crypto map CMAP 10 ipsec-isakmp
+ set peer 172.20.11.2
+ set transform-set TS
+ match address 100
+ set pfs group5
+ exit
+
+interface GigabitEthernet0/0
+ crypto map CMAP
+ exit
+
+end
+write memory
