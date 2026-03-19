@@ -1,11 +1,12 @@
 # 📄 README — VPN Client-to-Site (Topología 2)
 ### Proyecto de Redes | PNETLab | Seguridad Perimetral con FortiGate y Cisco IOS
 
+VIDEO DE YOUTUBE:
+https://youtu.be/exjZRweEXnw
 
 
 
-
----
+--
 
 ## 1. Objetivo de la Red
 
