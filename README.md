@@ -1,6 +1,10 @@
 # 📄 README — VPN Client-to-Site (Topología 2)
 ### Proyecto de Redes | PNETLab | Seguridad Perimetral con FortiGate y Cisco IOS
 
+
+
+
+
 ---
 
 ## 1. Objetivo de la Red
@@ -19,22 +23,9 @@ La VPN garantiza:
 
 ### Diagrama Lógico
 
-```
-  ┌──────────────┐        WAN (172.20.11.0/30)       ┌──────────────────┐
-  │  FortiGate   │ port1: 172.20.11.2 ◄──────────────► Gi0/0: 172.20.11.1 │
-  │  FGT-Server  │                                   │  Router-Cliente  │
-  │              │ port2: 10.20.11.254                │  (Cisco vIOS)    │
-  └──────┬───────┘                                   └────────┬─────────┘
-         │                                                    │
-         │ LAN Servidor (10.20.11.0/24)                       │ LAN Cliente (10.24.65.0/24)
-         │                                                    │ Gi0/1: 10.24.65.254
-         ▼                                                    ▼
-   ┌──────────┐                                        ┌──────────┐
-   │ PC Local │                                        │ PC Remota│
-   │ (VPC)    │                                        │ (VPC)    │
-   │10.20.11.10│                                       │10.24.65.10│
-   └──────────┘                                        └──────────┘
-```
+<img width="1469" height="1181" alt="Captura de pantalla 2026-03-18 204033" src="https://github.com/user-attachments/assets/768c8842-b164-4018-a9c7-7b1972db8cc9" />
+
+
 
 ### Descripción de Roles
 
